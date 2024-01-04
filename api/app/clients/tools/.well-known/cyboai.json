@@ -1,0 +1,13 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Cybo AI",
+  "name_for_model": "cyboai",
+  "description_for_human": "Find info from Cybo",
+  "description_for_model": "Find info from Cybo",
+  "auth": {
+    "type": "none"
+  },
+  "logo_url": "...",
+  "contact_email": "webmaster@cybo.com",
+  "legal_info_url": "..."
+}

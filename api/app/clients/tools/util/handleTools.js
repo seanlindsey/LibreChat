@@ -2,6 +2,7 @@ const { ZapierToolKit } = require('langchain/agents');
 const { Calculator } = require('langchain/tools/calculator');
 const { WebBrowser } = require('langchain/tools/webbrowser');
 const { SerpAPI, ZapierNLAWrapper } = require('langchain/tools');
+const CyboAI = require('../CyboAI');
 const { OpenAIEmbeddings } = require('langchain/embeddings/openai');
 const { getUserPluginAuthValue } = require('~/server/services/PluginService');
 const {
@@ -98,6 +99,7 @@ const loadTools = async ({
     'dall-e': OpenAICreateImage,
     'stable-diffusion': functions ? StructuredSD : StableDiffusionAPI,
     'azure-ai-search': functions ? StructuredACS : AzureAISearch,
+    cyboai: CyboAI,
     CodeBrew: CodeBrew,
   };
 
@@ -235,6 +237,14 @@ const loadTools = async ({
   let result = [];
   for (const tool of tools) {
     const validTool = requestedTools[tool];
+    console.log(
+      'VALID TOOL ERROR: validTool',
+      validTool,
+      'tool',
+      tool,
+      'requestedTools',
+      requestedTools,
+    );
     const plugin = await validTool();
 
     if (Array.isArray(plugin)) {

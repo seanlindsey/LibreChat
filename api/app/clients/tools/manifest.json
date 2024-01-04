@@ -171,5 +171,12 @@
     "description": "Use 'CodeBrew' to virtually interpret Python, Node, C, C++, Java, C#, PHP, MySQL, Rust or Go code.",
     "icon": "https://imgur.com/iLE5ceA.png",
     "authConfig": []
+  },
+  {
+    "name": "CyboAI",
+    "pluginKey": "cyboai",
+    "description": "Use Cybo AI to discover businesses and learn more about them.",
+    "icon": "https://dssdm2l6bhbrm.cloudfront.net/lyra004/img/apple-touch-icon-precomposed-152x152.png",
+    "authConfig": []
   }
 ]
